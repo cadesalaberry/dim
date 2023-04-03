@@ -73,12 +73,12 @@ async fn bootstrap() -> database::DbConnection {
         .map(|i| format!("Movie{i}.mkv"))
         .collect::<Vec<String>>();
 
-    let files = temp_dir_symlink(files.into_iter(), TEST_MP4_PATH);
+    let _files = temp_dir_symlink(files.into_iter(), TEST_MP4_PATH);
 
     let outdir = env!("CARGO_TARGET_TMPDIR");
     let tag = generate_tag();
 
-    let mut conn = get_conn_file(&format!("{outdir}/dim.{tag}.db"))
+    let conn = get_conn_file(&format!("{outdir}/dim.{tag}.db"))
         .await
         .unwrap();
 
