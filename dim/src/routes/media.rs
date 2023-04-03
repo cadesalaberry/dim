@@ -2,7 +2,6 @@ use crate::core::DbConnection;
 use crate::errors;
 use crate::external::tmdb::TMDBMetadataProvider;
 use crate::external::ExternalQueryIntoShow;
-use crate::json;
 use crate::tree;
 use crate::utils::secs_to_pretty;
 
@@ -18,6 +17,7 @@ use database::media::UpdateMedia;
 use database::mediafile::MediaFile;
 use database::progress::Progress;
 
+use dim_utils::json;
 use warp::http::status::StatusCode;
 use warp::reply;
 

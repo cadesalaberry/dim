@@ -2,7 +2,6 @@ use crate::core::DbConnection;
 use crate::core::EventTx;
 use crate::errors;
 use crate::external::tmdb::TMDBMetadataProvider;
-use crate::json;
 use crate::scanner;
 use crate::scanner::daemon::FsWatcher;
 use crate::tree;
@@ -15,6 +14,7 @@ use database::media::Media;
 use database::mediafile::MediaFile;
 
 use database::user::User;
+use dim_utils::json;
 
 use std::collections::HashMap;
 use std::sync::Arc;

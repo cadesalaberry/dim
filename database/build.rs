@@ -29,7 +29,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
 
     println!("cargo:warning=Built database {}.", db_file);
 
-    println!("cargo:rerun-if-changed=database/src/build.rs");
+    println!("cargo:rerun-if-changed=database/build.rs");
     println!("cargo:rerun-if-changed=database/migrations");
 
     Ok(())

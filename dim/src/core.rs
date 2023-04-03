@@ -1,4 +1,3 @@
-use crate::balanced_or_tree;
 use crate::external::tmdb::TMDBMetadataProvider;
 use crate::logger::RequestLogger;
 use crate::routes;
@@ -9,6 +8,7 @@ use crate::websocket;
 
 use database::library::MediaType;
 
+use dim_utils::balanced_or_tree;
 use once_cell::sync::OnceCell;
 
 use tokio::sync::mpsc::UnboundedReceiver;

@@ -1,5 +1,3 @@
-cargo-features = ["workspace-inheritance"]
-
 [package]
 name = "dim"
 build = "src/build.rs"
@@ -24,6 +22,9 @@ nightfall = { git = "https://github.com/Dusk-Labs/nightfall", tag = "0.3.12-rc4"
 # local dependencies
 database = { path = "../database", default-features = false, optional = true }
 events = { path = "../events" }
+dim-utils = { path = "../dim-utils" }
+dim-web = { path = "../dim-web" }
+
 
 serde = { version = "^1.0.125", default-features = false, features = ["derive", "std", "rc"] }
 serde_derive = "^1.0.125"
@@ -68,10 +69,10 @@ uuid = { version = "1.2.2", features = ["v4"] }
 walkdir = "2.3.1"
 warp = { version = "0.3.3", features = ["tls", "tokio-rustls"] }
 xmlwriter = "0.1.0"
-xtra = { version = "0.5.1", features = ["with-tokio-1"] }
+xtra = { version = "0.5.1", features = ["tokio", "with-tokio-1"] }
 
 # FIXME: Remove when we get rid of xtra_proc
-new_xtra = { package = "xtra", git = "https://github.com/Restioson/xtra", features = ["with-tokio-1"] }
+# new_xtra = { package = "xtra", git = "https://github.com/Restioson/xtra", features = ["tokio"] }
 url = "2.2.2"
 retry-block = "1.0.0"
 hyper = "0.14.20"
